@@ -75,7 +75,8 @@
     "actions": "Actions",
     "refund": "Refund",
     "no_sales": "No sales yet",
-    "export": "Export CSV"
+    "export": "Export CSV",
+    "tax": "Tax"
   },
   "customers": {
     "title": "Customers",
@@ -107,8 +108,8 @@
     "products": "Products",
     "actions": "Actions",
     "no_suppliers": "No suppliers yet",
-    "search_placeholder": "Search suppliers\u2026",
-    "loading": "Loading\u2026",
+    "search_placeholder": "Search suppliers…",
+    "loading": "Loading…",
     "add_supplier": "Add Supplier",
     "edit_supplier": "Edit Supplier",
     "notes": "Notes",
@@ -143,7 +144,8 @@
     "no_sales_data": "No sales data yet",
     "all_stocked": "All products are well stocked",
     "exclude_refunds": "Exclude refunds from revenue",
-    "threshold": "Threshold"
+    "threshold": "Threshold",
+    "tax": "Tax"
   },
   "settings": {
     "title": "Settings",

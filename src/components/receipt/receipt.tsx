@@ -96,7 +96,9 @@ export function Receipt({ data, settings }: ReceiptProps) {
               </div>
             )}
             {item.notes && (
-              <div className="text-[10px] text-gray-500 pl-2 italic">{item.notes}</div>
+              <div className="text-[10px] text-gray-500 pl-2 italic">
+                {item.notes}
+              </div>
             )}
           </div>
         ))}
@@ -118,7 +120,7 @@ export function Receipt({ data, settings }: ReceiptProps) {
         )}
         {data.taxAmount > 0 && (
           <div className="flex justify-between">
-            <span>{settings.taxName}</span>
+            <span>{settings.taxName || "Tax"}</span>
             <span>{fmt(data.taxAmount, c, d)}</span>
           </div>
         )}
@@ -149,12 +151,14 @@ export function Receipt({ data, settings }: ReceiptProps) {
             <span>{data.paymentMethod}</span>
           </div>
         )}
-        {data.amountTendered != null && data.amountTendered > 0 && !data.paymentLines?.length && (
-          <div className="flex justify-between">
-            <span>Tendered</span>
-            <span>{fmt(data.amountTendered, c, d)}</span>
-          </div>
-        )}
+        {data.amountTendered != null &&
+          data.amountTendered > 0 &&
+          !data.paymentLines?.length && (
+            <div className="flex justify-between">
+              <span>Tendered</span>
+              <span>{fmt(data.amountTendered, c, d)}</span>
+            </div>
+          )}
         {data.changeDue != null && data.changeDue > 0 && (
           <div className="flex justify-between">
             <span>Change</span>
